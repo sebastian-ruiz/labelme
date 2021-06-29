@@ -1,4 +1,4 @@
-auto_save: false
+auto_save: true
 display_label_popup: true
 store_data: true
 keep_prev: false
@@ -75,8 +75,8 @@ shortcuts:
   save_to: null
   delete_file: Ctrl+Delete
 
-  open_next: [D, Ctrl+Shift+D]
-  open_prev: [A, Ctrl+Shift+A]
+  open_next: [D, Ctrl+Shift+D, Ctrl+D]
+  open_prev: [A, Ctrl+Shift+A, Ctrl+A]
 
   zoom_in: [Ctrl++, Ctrl+=]
   zoom_out: Ctrl+-
@@ -84,15 +84,15 @@ shortcuts:
   fit_window: Ctrl+F
   fit_width: Ctrl+Shift+F
 
-  create_polygon: Ctrl+N
+  create_polygon: C
   create_rectangle: Ctrl+R
   create_circle: null
   create_line: null
   create_point: null
   create_linestrip: null
-  edit_polygon: Ctrl+J
+  edit_polygon: E
   delete_polygon: Delete
-  duplicate_polygon: Ctrl+D
+  duplicate_polygon: Ctrl+F
   copy_polygon: Ctrl+C
   paste_polygon: Ctrl+V
   undo: Ctrl+Z
