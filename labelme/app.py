@@ -1287,10 +1287,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setDirty()
 
     def pasteSelectedShape(self):
+        print("paste selected shape(s)")
         self.loadShapes(self.clipboard_shapes, replace=False)
         self.setDirty()
 
     def copyClipboardSelectedShape(self):
+        print("copy selected shape(s)")
         self.clipboard_shapes = [s.copy() for s in self.canvas.selectedShapes]
         n_clipboard_shapes = len(self.clipboard_shapes)
         self.actions.paste.setEnabled(n_clipboard_shapes)
@@ -1677,7 +1679,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def openNextImg(self, _value=False, load=True):
         keep_prev = self._config["keep_prev"]
-        if Qt.KeyboardModifiers() == (Qt.ControlModifier | Qt.ShiftModifier):
+        if QtWidgets.QApplication.keyboardModifiers() == (Qt.ControlModifier or Qt.ShiftModifier ):
             self._config["keep_prev"] = True
 
         if not self.mayContinue():
